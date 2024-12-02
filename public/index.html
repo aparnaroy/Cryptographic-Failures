@@ -14,13 +14,31 @@
     <script src="/__/firebase/init.js?useEmulator=true"></script>
   </head>
   <body>
-    <h1 style="padding-left: 80px; padding-top: 40px;">Welcome User!</h1>
+    <h1 style="padding-left: 80px; padding-top: 40px;">Welcome!</h1>
     <p style="padding-left: 80px;">
-      Our database contains top secret information teehee.
-      <br>
-      You'll never be able to access it! <i>Or will you?</i>
+      Please log in. If you're privileged enough, you'll be able to see the secret message!
+      <br><br> 
+      For all employee sloths, in case you've forgotten, here are your credentials: 
+      <br><b>Email: </b>justasloth@sloths.com
+      <br><b>Password: </b>password
     </p>
 
+    <!-- Login Form -->
+    <div style="padding-left: 80px; padding-top: 20px;">
+      <form>
+        <input id="email" type="email" autocomplete="email" placeholder="Email" style="width: 300px; height: 30px;" />
+        <br>
+        <input id="password" type="password" autocomplete="current-password" placeholder="Password" style="width: 300px; height: 30px; margin-top: 10px;" />
+        <br>
+        <button id="loginButton" style="margin-top: 10px;">Login</button>
+      </form>
+      <p id="errorMessage" style="color: red; display: none;">Invalid email or password</p>
+      <p id="statusMessage" style="display: none;"></p>
+    </div>
+
+    <img src="./sloth.png" style="width: 300px; height: 300px; padding-left: 80px; padding-top: 20px;">
+
     <script type="module" src="./js/firebase.js"></script>
+    <script type="module" src="./js/login.js"></script>
   </body>
 </html>

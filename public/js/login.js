@@ -80,7 +80,6 @@ document.getElementById('loginButton').addEventListener('click', async (event) =
                 img.src = `./happy-sloth.jpg`;
             } else {
                 // Normal message
-                const flag = await displayFlag();
                 heading.textContent = `Welcome Employee Sloth!`;
                 statusMessage.textContent = `Login successful! But no secret message for you lowly employee.`;
                 img.src = `./sad-sloth.jpg`;

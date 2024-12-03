@@ -82,7 +82,7 @@ document.getElementById('loginButton').addEventListener('click', async (event) =
                 // Normal message
                 const flag = await displayFlag();
                 heading.textContent = `Welcome Employee Sloth!`;
-                statusMessage.textContent = `Login successful! But no secret message for you lowly employee sloth.`;
+                statusMessage.textContent = `Login successful! But no secret message for you lowly employee.`;
                 img.src = `./sad-sloth.jpg`;
             }
     

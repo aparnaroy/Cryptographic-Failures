@@ -57,10 +57,6 @@ document.getElementById('loginButton').addEventListener('click', async (event) =
             const userCredential = await auth.signInWithEmailAndPassword(email, password);
             const user = userCredential.user;
     
-            // Check to see who the logged in user is
-            const adminSnapshot = await database.ref('users/admin/email').once('value');
-            const adminEmail = adminSnapshot.val();
-    
             const heading = document.querySelector('h1');
             const errorMessage = document.getElementById('errorMessage');
             const statusMessage = document.getElementById('statusMessage');
@@ -71,6 +67,10 @@ document.getElementById('loginButton').addEventListener('click', async (event) =
             introText.style.display = 'none';
             loginForm.style.display = 'none';
             errorMessage.style.display = 'none';
+
+            // Get the admin's email from the database
+            const adminSnapshot = await database.ref('users/admin/email').once('value');
+            const adminEmail = adminSnapshot.val();
     
             if (user.email === adminEmail) {
                 // Admin message
